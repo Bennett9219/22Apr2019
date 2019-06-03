@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <lightning:card title="Edit Account">
+        <lightning:recordEditForm recordId="{!v.recordId}"
+                                  objectApiName="Account">
+            <lightning:messages />
+            <lightning:inputField fieldName="Name" />
+            <lightning:inputField fieldName="Type" />
+            <lightning:inputField fieldName = "Phone" />
+            <lightning:inputField fieldName = "Website" />
+            <lightning:inputField fieldName = "Site" />
+            <lightning:inputField fieldName = "Industry" />
+            <lightning:button class="slds-m-top_small" type="submit" label="Save" />
+        </lightning:recordEditForm>
+        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Account">
+            <lightning:messages />
+            <lightning:outputField fieldName = "Name" />
+            <lightning:outputField fieldName = "Type" />
+            <lightning:outputField fieldName = "Phone" />
+            <lightning:outputField fieldName = "Website" />
+            <lightning:inputField fieldName = "Site" />
+            <lightning:outputField fieldName = "Industry" />
+        </lightning:recordViewForm>
+    </lightning:card>
+</aura:component>
